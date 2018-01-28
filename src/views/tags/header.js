@@ -1,10 +1,10 @@
 import { h } from 'preact';
 import { Link } from 'preact-router';
 
-export default function () {
+export default function ({ formName }) {
 	return (
 		<header className="header">
-			<h1>Preact Starter</h1>
+			<h1>formName</h1>
 			<nav>
 				<Link href="/">Home</Link>
 				<Link href="/blog">Blog</Link>

@@ -11,20 +11,23 @@
   },
   "scripts": {
     "build": "webpack --env.production --config config/webpack",
-    "start": "serve dist -s",
+    "start": "yarn build && serve dist -s",
     "watch": "webpack-dev-server --config config/webpack"
   },
   "dependencies": {
     "ganalytics": "^2.0.1",
     "md-colors": "^1.0.0",
+    "node-toolbox": "^0.0.1",
     "preact": "^8.2.5",
-    "preact-router": "^2.5.7"
+    "preact-router": "^2.5.7",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-babili": "^0.1.4",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",

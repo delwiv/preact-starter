@@ -1,11 +1,13 @@
 import { render } from 'preact';
+import { Redis } from 'node-toolbox'
 import GAnalytics from 'ganalytics';
+import uuid from 'uuid/v4'
 import './index.sass';
 
 let elem, App;
 function init() {
 	App = require('./views').default;
-	elem = render(App, document.getElementById('root'), elem);
+	elem = render(App(uuid()), document.getElementById('root'), elem);
 }
 
 init();
