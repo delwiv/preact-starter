@@ -38,6 +38,9 @@ module.exports = env => {
 		},
 		module: {
 			rules: [{
+		    test: /\.css$/,
+		    loader: 'style-loader!css-loader'
+			}, {
 				test: /\.jsx?$/,
 				exclude: exclude,
 				loader: {

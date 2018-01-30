@@ -8,7 +8,6 @@ const getForm = (name, props) => ({
 }[name])
 
 export default function (props) {
-	console.log({props})
 	return (
 		<div className="page page__home">
 			{getForm(props.form, props)}

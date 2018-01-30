@@ -1,5 +1,4 @@
 import { render } from 'preact';
-import { Redis } from 'node-toolbox'
 import GAnalytics from 'ganalytics';
 import uuid from 'uuid/v4'
 import './index.sass';
@@ -7,10 +6,11 @@ import './index.sass';
 let elem, App;
 function init() {
 	App = require('./views').default;
-	elem = render(App(uuid()), document.getElementById('root'), elem);
+	console.log(App)
+	elem = render(App, document.getElementById('root'), elem);
 }
 
-init();
+init()
 
 if (process.env.NODE_ENV === 'production') {
 	// cache all assets if browser supports serviceworker
